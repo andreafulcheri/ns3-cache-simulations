@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  client:
+    build:
+      context: "./"
+      dockerfile: "Dockerfile"
+    container_name: ns3-server
+    hostname: ns3-server
+    tty: true
+    cap_add:
+      - "ALL"
+    command: bash -c "/bin/bash"
